@@ -3,4 +3,13 @@
 // var c = 40;
 // console.log(a,b,c);
 
-console.log('merhaba');
+
+
+//number
+var a = 10; 
+var b = 3.14;
+console.log(typeof b);
+
+//string
+var name = 'Aynur';
+console.log(typeof name);
