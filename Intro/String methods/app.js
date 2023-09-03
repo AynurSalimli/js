@@ -19,5 +19,7 @@ value = firstName.charAt(0); //L
 value = langs.split(",")
 value = langs.replace("Python", "CSS")
 value = langs.includes("Python")
+value = langs.includes("Java")
+
 
 console.log(value);
