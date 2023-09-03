@@ -17,7 +17,7 @@ value = Math.abs(-10) // 10
 value = Math.pow(2,8) //256
 value = Math.max(2, 7) //7
 value = Math.min(3, 8) //3
-value = Math.random() ;
+value = Math.floor(Math.random() * 20 + 1); // 1-21 arasi ededler
 
 console.log(value);
 
