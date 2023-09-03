@@ -6,3 +6,4 @@ var a = 20
 console.log(a);
 console.log(['Ahmet', 'Mehmet']);
 console.error("This page doesn't exist");
+console.warn("Warning")
