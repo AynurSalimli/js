@@ -2,11 +2,15 @@ let value;
 const value1= 10;
 const value2= 8;
 
+
+//Operators
 value = value1+value2
 value = value1-value2
 value = value1*value2
 value = value1/value2
 value = value1 % value2
+
+//Math operators
 value = Math.PI
 value = Math.E
 value = Math.ceil(3.2) //4
