@@ -26,8 +26,10 @@ const programmers = [
     age: 20,
   },
   {
-    name: "Jennie Williams",
+    name: "Jennie",
+    surname: "Williams",
     age: 22,
+
   },
 ];
 value = programmers;
