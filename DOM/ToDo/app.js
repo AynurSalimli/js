@@ -36,16 +36,33 @@ element = document.getElementById("todo-form");
 element = document.getElementById("title");
 
 //Elementi class-a gore secme
-element = document.getElementsByClassName("todo-list")[2]
-element = document.getElementsByTagName("li")
+element = document.getElementsByClassName("todo-list")[2];
+element = document.getElementsByTagName("li");
 
 //Query Selector
-element = document.querySelector("li")
+element = document.querySelector("li");
 element = document.querySelector("#todo-form");
-element = document.querySelectorAll("li")
-element.forEach(function(a){
-    console.log(a);
-})
+element = document.querySelectorAll("li");
+element.forEach(function (a) {
+  console.log(a);
+});
 
+//Style properties
+element = document.querySelectorAll("li");
+for (let i = 0; i < element.length; i++) {
+  element[i].style.color = "green";
+  element[i].style.marginLeft = "20px";
+  element[i].innerHTML = "YES";
+//   element[i].innerHTML = "<span style = 'color:red'>NO</span>";
+}
 
-console.log(element);
+element.forEach(function (el) {
+  el.style.background = "black";
+});
+
+last = document.querySelector("li:last-child");
+odd = document.querySelectorAll("li:nth-child(odd");
+odd.forEach(function (odd) {
+  odd.style.color = "white";
+});
+console.log(last);
