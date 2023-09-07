@@ -19,15 +19,23 @@
 
 //Yeni element
 
-const newElement = document.createElement("a");
-const cardbody = document.getElementsByClassName("card-body")[1];
-newElement.id = "clear-todos"
-newElement.className = "btn btn-danger"
-newElement.href = "https://www.google.com/";
-// cardbody.textContent = 'salam' // her sey silinir 
-const text=document.createTextNode("naber")
-newElement.appendChild(document.createTextNode("go to the link"))
-cardbody.appendChild(newElement)
-cardbody.appendChild(text)
-console.log(cardbody);
-console.log(newElement);
+// const newElement = document.createElement("a");
+// const cardbody = document.getElementsByClassName("card-body")[1];
+// newElement.id = "clear-todos"
+// newElement.className = "btn btn-danger"
+// newElement.href = "https://www.google.com/";
+// // cardbody.textContent = 'salam' // her sey silinir
+// const text=document.createTextNode("naber")
+// newElement.appendChild(document.createTextNode("go to the link"))
+// cardbody.appendChild(newElement)
+// cardbody.appendChild(text)
+// console.log(cardbody);
+// console.log(newElement);
+
+//Dinamik element silmek
+
+const todolist = document.querySelector("ul.list-group");
+const todos = document.querySelectorAll("li.list-group-item");
+todos[2].remove(); //silmek
+
+todolist.removeChild(todolist.lastElementChild)
