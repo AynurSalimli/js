@@ -34,8 +34,19 @@
 
 //Dinamik element silmek
 
-const todolist = document.querySelector("ul.list-group");
-const todos = document.querySelectorAll("li.list-group-item");
-todos[2].remove(); //silmek
+// const todolist = document.querySelector("ul.list-group");
+// const todos = document.querySelectorAll("li.list-group-item");
+// todos[2].remove(); //silmek
 
-todolist.removeChild(todolist.lastElementChild)
+// todolist.removeChild(todolist.lastElementChild)
+
+//replace
+
+const cardbody = document.querySelectorAll(".card-body")[1];
+const newElement = document.createElement("h3");
+newElement.className = "card-title";
+newElement.id = "tasks-title";
+newElement.textContent = "Yeni todolar";
+
+const oldElement = document.querySelector("#tasks-title");
+cardbody.replaceChild(newElement, oldElement);
