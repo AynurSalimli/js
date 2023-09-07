@@ -21,12 +21,31 @@
 // console.log(value);
 // console.log(this.document);
 
-let value;
-value = document;
-value = document.scripts; //app.js en sonda olmalidir
-value = document.links;
-value = document.links[0].getAttribute("href");
-value = document.links[0].getAttribute("class");
+// let value;
+// value = document;
+// value = document.scripts; //app.js en sonda olmalidir
+// value = document.links;
+// value = document.links[0].getAttribute("href");
+// value = document.links[0].getAttribute("class");
+
+// console.log(value);
+
+let element;
+
+element = document.getElementById("todo-form");
+element = document.getElementById("title");
+
+//Elementi class-a gore secme
+element = document.getElementsByClassName("todo-list")[2]
+element = document.getElementsByTagName("li")
+
+//Query Selector
+element = document.querySelector("li")
+element = document.querySelector("#todo-form");
+element = document.querySelectorAll("li")
+element.forEach(function(a){
+    console.log(a);
+})
 
 
-console.log(value);
+console.log(element);
