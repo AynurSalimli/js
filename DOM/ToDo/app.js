@@ -90,3 +90,17 @@
 // document.addEventListener("keyup", function(e){
 //   console.log("pressed");
 // })
+
+//Mouse Events
+const cardBody = document.querySelectorAll(".card-body")[1];
+
+const title = document.querySelector("#tasks-title");
+
+title.addEventListener("dblclick", function(e){
+  console.log(e.type);
+})
+
+title.addEventListener("mousedown", function(e) {
+  console.log(e.type);
+});
+console.log(cardBody);
