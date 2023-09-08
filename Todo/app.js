@@ -15,8 +15,18 @@ function eventListeners() {
   document.addEventListener("DOMContentLoaded", loadAllTodosToUI);
   secondCardBody.addEventListener("click", deleteTodo);
   filter.addEventListener("keyup", filterTodos);
+  clearBtn.addEventListener("click", clearAllTodos);
 }
 
+function clearAllTodos(e) {
+  if (confirm("Are you sure u want to delete all todos?")) {
+    // todolist.innerHTML = ""
+    while (todolist.firstElementChild != null) {
+      todolist.removeChild(todolist.firstElementChild);
+    }
+    localStorage.removeItem("todos");
+  }
+}
 function filterTodos(e) {
   const filterValue = e.target.value.toLowerCase();
   const listItems = document.querySelectorAll(".list-group-item");
@@ -79,6 +89,7 @@ function getTodosFromStorage() {
   } else {
     todos = JSON.parse(localStorage.getItem("todos"));
   }
+  return todos;
 }
 
 function addTodoToStorage(newTodo) {
