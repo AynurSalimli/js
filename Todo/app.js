@@ -14,11 +14,21 @@ function eventListeners() {
   form.addEventListener("submit", addTodo);
   document.addEventListener("DOMContentLoaded", loadAllTodosToUI);
   secondCardBody.addEventListener("click", deleteTodo);
-  filter.addEventListener("keyup", filterTodos)
+  filter.addEventListener("keyup", filterTodos);
 }
 
-function filterTodos(e){
-    console.log(e.target);
+function filterTodos(e) {
+  const filterValue = e.target.value.toLowerCase();
+  const listItems = document.querySelectorAll(".list-group-item");
+
+  listItems.forEach(function (listItem) {
+    const text = listItem.textContent.toLowerCase();
+    if (text.indexOf(filterValue) === -1) {
+      listItem.setAttribute("style", "display: none !important");
+    } else {
+      listItem.setAttribute("style", "display: block");
+    }
+  });
 }
 
 function deleteTodo(e) {
@@ -36,7 +46,7 @@ function deleteTodoFromStorage(deletetodo) {
       todos.splice(index, 1);
     }
   });
-  localStorage.setItem("todos", JSON.stringify(todos))
+  localStorage.setItem("todos", JSON.stringify(todos));
 }
 function loadAllTodosToUI() {
   let todos = getTodosFromStorage();
