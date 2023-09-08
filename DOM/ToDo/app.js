@@ -92,15 +92,22 @@
 // })
 
 //Mouse Events
-const cardBody = document.querySelectorAll(".card-body")[1];
+// const cardBody = document.querySelectorAll(".card-body")[1];
 
-const title = document.querySelector("#tasks-title");
+// const title = document.querySelector("#tasks-title");
 
-title.addEventListener("dblclick", function(e){
-  console.log(e.type);
-})
+// title.addEventListener("dblclick", function(e){
+//   console.log(e.type);
+// })
 
-title.addEventListener("mousedown", function(e) {
-  console.log(e.type);
-});
-console.log(cardBody);
+// title.addEventListener("mousedown", function(e) {
+//   console.log(e.type);
+// });
+// console.log(cardBody);
+
+
+//localstorage and sessionstorage
+console.log(window.sessionStorage);
+
+//button
+const 
